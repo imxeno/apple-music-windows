@@ -37,9 +37,15 @@ jobs:
 
       - name: Make ia32 package
         run: yarn make -a ia32
+        env:
+          CASTLABS_EVS_USER: ${{ secrets.CASTLABS_EVS_USER }}
+          CASTLABS_EVS_PASSWORD: ${{ secrets.CASTLABS_EVS_PASSWORD }}
 
       - name: Make x64 package
         run: yarn make -a x64
+        env:
+          CASTLABS_EVS_USER: ${{ secrets.CASTLABS_EVS_USER }}
+          CASTLABS_EVS_PASSWORD: ${{ secrets.CASTLABS_EVS_PASSWORD }}
 
       - name: Upload build artifacts
         uses: actions/upload-artifact@v2.2.4
