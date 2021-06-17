@@ -44,8 +44,8 @@ jobs:
       - name: Upload ia32 build artifact
         uses: actions/upload-artifact@v2.2.4
         with:
-          name: apple-music-windows-x32
-          path: out/make/zip/win32/ia32/*
+          name: apple-music-windows-ia32
+          path: out/apple-music-windows-win32-ia32/*
 
       - name: Make x64 package
         run: yarn make -a x64
@@ -57,4 +57,4 @@ jobs:
         uses: actions/upload-artifact@v2.2.4
         with:
           name: apple-music-windows-x64
-          path: out/make/zip/win32/x64/*
+          path: out/apple-music-windows-win32-x64/*
