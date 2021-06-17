@@ -4,8 +4,21 @@ body {
   margin: auto;
   height: 100vh;
   position: relative;
-  border: 1px solid #b4b6b8;
   box-sizing: border-box;
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: rgba(255, 255, 255, 0.5) !important;
+    border: 1px solid #b4b6b8;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: rgba(0, 0, 0, 0.25) !important;
+    border: 1px solid #333;
+  }
 }
 
 #root {
