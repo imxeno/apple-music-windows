@@ -18,12 +18,18 @@ _UI will be in your Apple ID language, mine is Polish._
 - Slightly windowsified UI inspired by UWP (e.g. acrylic sidebar)
 - Widevine CDM for all your Apple Music DRM protected tracks
 - Frameless design with custom CSS and some minor QoL changes
+- Windows dark theme support
 - Still a bit choppy interface, but works better than iTunes in most cases
 
 ## What doesn't work
 
 - Dolby Atmos playback, because it's not supported on the web version of Apple Music
 - Other more advanced features like streaming to an AirPlay device
+
+# Known issues
+
+- While the dark mode works, switching between Windows themes when the app is open causes a visual glitch connected with the acrylic sidebar - a fix for this should be fairy simple, but I didn't have enough motivation to do that 😛
+- From time to time you may encounter an error presented in a form of Apple-style alert - in that case it's probably Apple's fault - before submitting a bug report please check if you can reproduce it using the official Apple Music web app
 
 ## License
 
