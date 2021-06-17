@@ -1,4 +1,4 @@
-<center><img width="128px" height="128px" src="./.github/apple-music-icon.png" />
+<div align="center"><img width="128px" height="128px" src="./.github/apple-music-icon.png" />
 
 # Apple Music for Windows
 
@@ -9,7 +9,7 @@ I know, it's Electron. But hey, at least it's not iTunes - let's think this way.
 
 _UI will be in your Apple ID language, mine is Polish._
 
-</center>
+</div>
 
 ## Featuring
 
