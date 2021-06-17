@@ -4,6 +4,8 @@ body {
   margin: auto;
   height: 100vh;
   position: relative;
+  border: 1px solid #b4b6b8;
+  box-sizing: border-box;
 }
 
 #root {
