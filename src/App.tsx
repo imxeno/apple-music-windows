@@ -1,4 +1,4 @@
-import React, { ReactEventHandler, useEffect, useRef } from "react";
+import React, { ReactEventHandler } from "react";
 
 import TopBar from "./components/TopBar";
 
