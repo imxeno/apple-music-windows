@@ -20,7 +20,7 @@ const createWindow = (): void => {
   const mainWindow = new BrowserWindow({
     height: 650,
     width: 1100,
-    minWidth: 1000,
+    minWidth: 1050,
     frame: false,
     transparent: true,
     vibrancy: nativeTheme.shouldUseDarkColors ? "dark" : "light",
