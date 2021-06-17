@@ -31,6 +31,6 @@ This project is licensed under the MIT License.
 
 ## Notice of Non-Affiliation and Disclaimer
 
-This projects is not affiliated, associated, authorized, endorsed by, or in any way officially connected with Apple Inc. or any of its subsidiaries or its affiliates.
+This project is not affiliated, associated, authorized, endorsed by, or in any way officially connected with Apple Inc. or any of its subsidiaries or its affiliates.
 
 Apple and Apple Music are trademarks of Apple Inc., registered in the U.S. and other countries and regions. All other trademarks are the property of their respective owners.
