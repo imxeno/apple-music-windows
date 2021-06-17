@@ -48,9 +48,9 @@ module.exports = {
         await exec(
           `python -m castlabs_evs.vmp -n sign-pkg "${options.outputPaths[0]}"`
         );
-      }
-      if (options.spinner) {
-        options.spinner.succeed("EVS signing succeeded!");
+        if (options.spinner) {
+          options.spinner.succeed("EVS signing succeeded!");
+        }
       }
     },
   },
