@@ -43,10 +43,10 @@ module.exports = {
           );
       } else {
         await exec(
-          `python -m castlabs_evs.account refresh -n -A ${process.env.CASTLABS_EVS_USER} -P ${process.env.CASTLABS_EVS_PASSWORD}`
+          `python -m castlabs_evs.account -n refresh -A ${process.env.CASTLABS_EVS_USER} -P ${process.env.CASTLABS_EVS_PASSWORD}`
         );
         await exec(
-          `python -m castlabs_evs.vmp sign-pkg -n "${options.outputPaths[0]}"`
+          `python -m castlabs_evs.vmp -n sign-pkg "${options.outputPaths[0]}"`
         );
       }
       if (options.spinner) {
