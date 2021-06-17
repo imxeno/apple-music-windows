@@ -7,7 +7,7 @@
   "scripts": {
     "start": "electron-forge start",
     "package": "set ELECTRON_CUSTOM_VERSION=13.1.2-wvvmp&&set ELECTRON_MIRROR=https://github.com/castlabs/electron-releases/releases/download/&&electron-forge package",
-    "make": "electron-forge make",
+    "make": "set ELECTRON_CUSTOM_VERSION=13.1.2-wvvmp&&set ELECTRON_MIRROR=https://github.com/castlabs/electron-releases/releases/download/&&electron-forge make",
     "publish": "electron-forge publish",
     "lint": "eslint --ext .ts ."
   },
@@ -17,39 +17,6 @@
     "email": "me@piotradamczyk.pl"
   },
   "license": "MIT",
-  "config": {
-    "forge": {
-      "packagerConfig": {
-        "icon": "./resources/app.ico"
-      },
-      "makers": [
-        {
-          "name": "@electron-forge/maker-zip"
-        }
-      ],
-      "plugins": [
-        [
-          "@electron-forge/plugin-webpack",
-          {
-            "mainConfig": "./webpack.main.config.js",
-            "renderer": {
-              "config": "./webpack.renderer.config.js",
-              "entryPoints": [
-                {
-                  "html": "./src/index.html",
-                  "js": "./src/renderer.ts",
-                  "name": "main_window",
-                  "preload": {
-                    "js": "./src/preload.ts"
-                  }
-                }
-              ]
-            }
-          }
-        ]
-      ]
-    }
-  },
   "devDependencies": {
     "@electron-forge/cli": "^6.0.0-beta.57",
     "@electron-forge/maker-deb": "^6.0.0-beta.57",
