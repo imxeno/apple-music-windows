@@ -1,7 +1,8 @@
-<center><img width="128px" height="128px" src="./.github/apple-music-icon.png" />
+<div align="center"><img width="128px" height="128px" src="./.github/apple-music-icon.png" />
 
 # Apple Music for Windows
-
+![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/imxeno/apple-music-windows) [![CI](https://github.com/imxeno/apple-music-windows/actions/workflows/main.yml/badge.svg)](https://github.com/imxeno/apple-music-windows/actions/workflows/main.yml) ![GitHub package.json dependency version (prod)](https://img.shields.io/github/package-json/dependency-version/imxeno/apple-music-windows/electron) ![GitHub](https://img.shields.io/github/license/imxeno/apple-music-windows)
+  
 Electron-powered Apple Music app for Windows, made in 6 hours.  
 I know, it's Electron. But hey, at least it's not iTunes - let's think this way.
 
@@ -9,7 +10,7 @@ I know, it's Electron. But hey, at least it's not iTunes - let's think this way.
 
 _UI will be in your Apple ID language, mine is Polish._
 
-</center>
+</div>
 
 ## Featuring
 
