@@ -1,0 +1,20 @@
+.WindowsFrameButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 46px;
+  font-size: 16px;
+  fill: #999;
+  z-index: 100000;
+  transition: background-color 0.25s;
+}
+
+.WindowsFrameButton:hover {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.WindowsFrameButton.close:hover {
+  background-color: rgba(232, 17, 35, 0.9);
+  fill: #fff;
+}
