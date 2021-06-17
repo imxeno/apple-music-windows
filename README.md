@@ -26,7 +26,7 @@ _UI will be in your Apple ID language, mine is Polish._
 - Dolby Atmos playback, because it's not supported on the web version of Apple Music
 - Other more advanced features like streaming to an AirPlay device
 
-# Known issues
+## Known issues
 
 - While the dark mode works, switching between Windows themes when the app is open causes a visual glitch connected with the acrylic sidebar - a fix for this should be fairy simple, but I didn't have enough motivation to do that 😛
 - From time to time you may encounter an error presented in a form of Apple-style alert - in that case it's probably Apple's fault - before submitting a bug report please check if you can reproduce it using the official Apple Music web app
