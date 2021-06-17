@@ -41,15 +41,18 @@ jobs:
           CASTLABS_EVS_USER: ${{ secrets.CASTLABS_EVS_USER }}
           CASTLABS_EVS_PASSWORD: ${{ secrets.CASTLABS_EVS_PASSWORD }}
 
+      - name: Upload ia32 build artifact
+        uses: actions/upload-artifact@v2.2.4
+        with:
+          path: out/make/zip/win32/ia32/*
+
       - name: Make x64 package
         run: yarn make -a x64
         env:
           CASTLABS_EVS_USER: ${{ secrets.CASTLABS_EVS_USER }}
           CASTLABS_EVS_PASSWORD: ${{ secrets.CASTLABS_EVS_PASSWORD }}
 
-      - name: Upload build artifacts
+      - name: Upload x64 build artifact
         uses: actions/upload-artifact@v2.2.4
         with:
-          path: |
-            out/make/zip/win32/ia32/*
-            out/make/zip/win32/x64/*
+          path: out/make/zip/win32/x64/*
