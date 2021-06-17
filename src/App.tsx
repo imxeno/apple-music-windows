@@ -15,7 +15,7 @@ export default function App() {
     <div className={styles.container}>
       <TopBar />
       <iframe
-        src="https://music.apple.com"
+        src="https://music.apple.com/library/recently-added"
         className={styles.webview}
         onLoad={onLoad}
         allow="encrypted-media *;"
