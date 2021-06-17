@@ -2,9 +2,9 @@ name: CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
   workflow_dispatch:
 
 jobs:
@@ -15,17 +15,19 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
         with:
-          node-version: '14'
+          node-version: "14"
       - name: Install dependencies
         run: yarn --frozen-lockfile
-        
+
       - name: Make ia32 package
         run: yarn make -a ia32
 
       - name: Make x64 package
         run: yarn make -a x64
-        
+
       - name: Upload build artifacts
         uses: actions/upload-artifact@v2.2.4
         with:
-          path: "./out/make/zip/win32/**/*.zip"
+          path: |
+            "./out/make/zip/win32/ia32/*.zip"
+            "./out/make/zip/win32/x64/*.zip"
