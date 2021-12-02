@@ -43,7 +43,16 @@ export default function App() {
         onLoadStart={onLoadStart}
         allow="encrypted-media *;"
       />
-      {!shown && <Spinner />}
+      {!shown && (
+        <>
+          <div className={styles.frameButtonBackgroundContainer}>
+            <div className={styles.frameButtonBackground} />
+          </div>
+          <div className={styles.spinnerContainer}>
+            <Spinner />
+          </div>
+        </>
+      )}
     </div>
   );
 }

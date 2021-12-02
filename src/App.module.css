@@ -1,9 +1,9 @@
 .container {
+  position: relative;
   height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   -webkit-app-region: drag;
+  display: flex;
+  flex-direction: column;
 }
 
 .container .webview {
@@ -12,4 +12,26 @@
   height: 100%;
   border: none;
   -webkit-app-region: no-drag;
+}
+
+.frameButtonBackgroundContainer {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.frameButtonBackground {
+  /* Frame button dimensions */
+  height: 30px;
+  width: 138px;
+  -webkit-app-region: no-drag;
+}
+
+.spinnerContainer {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
 }
