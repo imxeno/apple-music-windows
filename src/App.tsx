@@ -24,9 +24,9 @@ export default function App() {
     }
   }, [loaded, shown]);
 
-  const onLoad: ReactEventHandler<HTMLIFrameElement> = (e) => {
+  const onLoad: ReactEventHandler<HTMLIFrameElement> = async (e) => {
     const frame = e.currentTarget;
-    frame.contentDocument.head.innerHTML += `<style>${window.customAppleMusicCss}</style>`;
+    frame.contentDocument.head.innerHTML += `<style>${await window.electron.loadCSS()}</style>`;
     setLoaded(true);
   };
   const onLoadStart: ReactEventHandler<HTMLIFrameElement> = (e) => {

@@ -1,0 +1,145 @@
+/*-------------------------------
+   Section: General fixes
+-------------------------------*/
+
+/* Make background actually transparent */
+:root {
+  color-scheme: light !important;
+}
+
+/* Make body transparent */
+body {
+  background-color: transparent !important;
+}
+
+/* Restyle app scrollbars to be a bit more Apple-like */
+
+::-webkit-scrollbar {
+  width: 14px;
+  height: 18px;
+}
+
+::-webkit-scrollbar-thumb {
+  height: 6px;
+  border: 4px solid rgba(0, 0, 0, 0);
+  background-clip: padding-box;
+  background-color: rgba(0, 0, 0, 0, 0.5);
+  -webkit-border-radius: 7px;
+  -webkit-box-shadow: inset -1px -1px 0px rgba(0, 0, 0, 0.2),
+    inset 1px 1px 0px rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+/* Add margin-top to main component
+   (this fixes scrollbar being behind the top bar) */
+
+@media only screen and (min-width: 484px) {
+  body.has-js:not(.no-song-loaded) .web-navigation__navigation-details-view,
+  body.has-js:not(.not-authenticated) .web-navigation__navigation-details-view {
+    padding-top: 0px;
+    margin-top: 55px;
+  }
+}
+
+/* Make page white on light theme */
+@media (prefers-color-scheme: light) {
+  .page-container {
+    background-color: #fff;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  /* Make page dark on light theme */
+  .page-container {
+    background-color: #2c2c2c;
+  }
+
+  /* Make left nav transparent on dark theme */
+  .web-navigation__navigation-container {
+    background-color: transparent !important;
+  }
+}
+
+/* Disable oversized box-shadow in media controls */
+.web-chrome *:focus,
+.web-chrome *:active {
+  box-shadow: none !important;
+}
+
+/* Hide 'Open in iTunes' button */
+.web-navigation__native-upsell {
+  display: none;
+}
+
+/* Hide footer */
+
+.dt-footer {
+  display: none;
+}
+
+/* Make space for frame buttons */
+@media only screen and (min-width: 484px) {
+  .web-chrome__grid-container {
+    margin-right: 140px;
+  }
+  .web-chrome__auth-no-chrome {
+    margin-left: 0;
+    width: calc(100% - 140px);
+  }
+}
+
+/*-------------------------------
+   Section: Add drag zone
+-------------------------------*/
+
+/* Make full window draggable
+   this fixes dragging the window while the Apple hamsters do their thing */
+.web-navigation {
+  -webkit-app-region: drag;
+}
+
+/* But make content inside not draggable
+   (needed for the fix above to work properly, because instead the whole app would be draggable) */
+.web-navigation > *,
+.web-chrome {
+  -webkit-app-region: no-drag;
+}
+
+/* Make non-authenticated bar draggable */
+.web-navigation__header,
+.web-chrome__auth-no-chrome {
+  -webkit-app-region: drag;
+}
+
+/* But make the sign in button not draggable */
+.web-navigation__auth {
+  -webkit-app-region: no-drag;
+}
+
+/* Make the authenticated bar draggable */
+.web-chrome__grid-container {
+  -webkit-app-region: drag;
+}
+
+/* But don't make playback controls, the centered lcd, 
+   volume controls, playlist button and profile picture draggable */
+.web-chrome-playback-controls__directionals,
+.web-chrome-playback-lcd,
+.web-chrome-playback-lcd__volume,
+.web-chrome-playback-controls__platter-toggle-buttons,
+.web-navigation__auth {
+  -webkit-app-region: no-drag;
+}
+
+/*------------------------------------------
+   Section: Make space for frame buttons
+------------------------------------------*/

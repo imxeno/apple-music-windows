@@ -1,11 +1,14 @@
 import { BrowserWindow, ipcMain } from "electron";
+import { readFile } from "fs/promises";
+import { resolve as resolvePath } from "path";
 import {
   CLOSE,
   IS_FOCUSED,
   IS_MAXIMIZED,
+  LOAD_CSS,
   MAXIMIZE,
   MINIMIZE,
-  UNMAXIMIZE
+  UNMAXIMIZE,
 } from "./channels";
 
 export function registerIpc(window: BrowserWindow): void {
@@ -26,6 +29,9 @@ export function registerIpc(window: BrowserWindow): void {
   });
   ipcMain.handle(UNMAXIMIZE, () => {
     window.unmaximize();
+  });
+  ipcMain.handle(LOAD_CSS, async () => {
+    return await readFile(resolvePath(__dirname + "/inject.css"), "utf-8");
   });
   window.on("focus", () => window.webContents.send("focus"));
   window.on("blur", () => window.webContents.send("blur"));
