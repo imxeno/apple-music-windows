@@ -35,6 +35,10 @@ const createWindow = (): void => {
     },
   });
 
+  nativeTheme.on("updated", () =>
+    mainWindow.setVibrancy(nativeTheme.shouldUseDarkColors ? "dark" : "light")
+  );
+
   registerIpc(mainWindow);
 
   // and load the index.html of the app.
