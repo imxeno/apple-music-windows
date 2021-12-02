@@ -1,7 +1,7 @@
 {
   "name": "apple-music-windows",
   "productName": "apple-music-windows",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "private": true,
   "description": "It's not iTunes. That is a huge plus.",
   "main": ".webpack/main",
