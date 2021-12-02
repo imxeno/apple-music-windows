@@ -1,11 +1,13 @@
-import React, { ReactEventHandler, useEffect, useState } from "react";
+import React, { ReactEventHandler, useEffect, useRef, useState } from "react";
 
 import TopBar from "./components/TopBar";
 
 import styles from "./App.module.css";
 import Spinner from "./components/Spinner";
+import { usePatchLoader } from "./hooks";
 
 export default function App() {
+  const ref = useRef<HTMLIFrameElement>();
   const [loaded, setLoaded] = useState(false);
   const [shown, setShown] = useState(false);
 
@@ -23,24 +25,23 @@ export default function App() {
       setShown(false);
     }
   }, [loaded, shown]);
-
   const onLoad: ReactEventHandler<HTMLIFrameElement> = async (e) => {
     const frame = e.currentTarget;
     frame.contentDocument.head.innerHTML += `<style>${await window.electron.loadCSS()}</style>`;
     setLoaded(true);
   };
-  const onLoadStart: ReactEventHandler<HTMLIFrameElement> = (e) => {
-    setLoaded(false);
-  };
+
+  usePatchLoader(ref);
+
   return (
     <div className={styles.container}>
       <TopBar />
       <iframe
+        ref={ref}
         style={{ display: shown ? "block" : "none" }}
         src="https://music.apple.com/library/recently-added"
         className={styles.webview}
         onLoad={onLoad}
-        onLoadStart={onLoadStart}
         allow="encrypted-media *;"
       />
       {!shown && (
