@@ -140,6 +140,11 @@ body {
   -webkit-app-region: no-drag;
 }
 
-/*------------------------------------------
-   Section: Make space for frame buttons
-------------------------------------------*/
+.infinite-scroll {
+  position: absolute;
+  display: block;
+  height: 0;
+  width: 0;
+  left: 0;
+  bottom: 0;
+}
