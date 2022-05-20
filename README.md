@@ -1,3 +1,7 @@
+# Discontinued
+
+This project has been discontinued. Check out [Cider](https://github.com/ciderapp/Cider).
+
 <div align="center"><img width="128px" height="128px" src="./.github/apple-music-icon.png" />
 
 # Apple Music for Windows
